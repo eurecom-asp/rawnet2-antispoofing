@@ -35,7 +35,7 @@ spoofIdx_eval = find(eval_labels==0);
 % train SVM on S_dev (development scores generated from all 4 systems) and
 % test on S_eval (evalution scores generated from all 4 systems)
 
-SVMModel = fitcsvm(S_dev',dev_labels','KernelFunction','linear','KernelScale','auto','Standardize',true);
+SVMModel = fitcsvm(S_dev',dev_labels','KernelFunction','polynomial','KernelScale','auto','PolynomialOrder',5,'Nu',0.5,'Standardize',true,'OutlierFraction',0);
 
 % Score prediction on dev data
 [~,scores_cm_dev] = predict(SVMModel,S_dev'); scores_cm_dev = scores_cm_dev(:,2);  % dev scores in scores_cm_dev
