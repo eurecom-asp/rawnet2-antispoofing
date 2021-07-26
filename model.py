@@ -179,7 +179,7 @@ class RawNet(nn.Module):
         )
         
         self.first_bn = nn.BatchNorm1d(num_features = d_args['filts'][0])
-        self.lrelu = nn.SELU(inplace=True)
+        self.selu = nn.SELU(inplace=True)
         self.block0 = nn.Sequential(Residual_block(nb_filts = d_args['filts'][1], first = True))
         self.block1 = nn.Sequential(Residual_block(nb_filts = d_args['filts'][1]))
         self.block2 = nn.Sequential(Residual_block(nb_filts = d_args['filts'][2]))
