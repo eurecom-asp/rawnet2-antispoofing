@@ -229,7 +229,7 @@ class RawNet(nn.Module):
         x = self.Sinc_conv(x)    # Fixed sinc filters convolution
         x = F.max_pool1d(torch.abs(x), 3)
         x = self.first_bn(x)
-        x = self.lrelu(x)
+        x = self.selu(x)
         
         x0 = self.block0(x)
         y0 = self.avgpool(x0).view(x0.size(0), -1) # torch.Size([batch, filter])
