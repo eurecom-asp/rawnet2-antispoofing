@@ -149,7 +149,7 @@ class Residual_block(nn.Module):
         else:
             out = x
             
-        out = self.conv1(x)
+        out = self.conv1(out)
         out = self.bn2(out)
         out = self.lrelu(out)
         out = self.conv2(out)
