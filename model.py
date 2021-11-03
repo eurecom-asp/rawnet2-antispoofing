@@ -217,9 +217,9 @@ class RawNet(nn.Module):
 			
        
         self.sig = nn.Sigmoid()
-        self.logsoftmax = nn.LogSoftmax(dim=1)
         
-    def forward(self, x, y = None):
+        
+    def forward(self, x, y = None,is_test=False):
         
         
         nb_samp = x.shape[0]
@@ -274,12 +274,18 @@ class RawNet(nn.Module):
         self.gru.flatten_parameters()
         x, _ = self.gru(x)
         x = x[:,-1,:]
-        code = self.fc1_gru(x)
-        out = self.fc2_gru(code)
-        output=self.logsoftmax(out)
+        x = self.fc1_gru(x)
+        x = self.fc2_gru(x)
+
+        if not is_test:
+            output = x
+            return output
+
+        else:
+            output=F.softmax(x,dim=1)
+            return output
       
-        return output
-        
+       
         
 
     def _make_attention_fc(self, in_features, l_out_features):

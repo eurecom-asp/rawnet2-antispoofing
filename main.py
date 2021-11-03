@@ -75,7 +75,7 @@ def produce_evaluation_file(dataset, model, device, save_path):
         num_total += batch_size
         batch_x = batch_x.to(device)
         batch_y = batch_y.view(-1).type(torch.int64).to(device)
-        batch_out = model(batch_x,batch_y)
+        batch_out = model(batch_x,batch_y,is_test=True)
         batch_score = (batch_out[:, 1]
                        ).data.cpu().numpy().ravel()
 
