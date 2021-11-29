@@ -134,13 +134,13 @@ class ASVDataset(Dataset):
             return ASVFile(speaker_id=tokens[0],
                 file_name=tokens[1],
                 path=os.path.join(self.files_dir, tokens[1] + '.flac'),
-                sys_id=self.sysid_dict[tokens[2]],
-                key=int(tokens[3] == 'bonafide'))
+                sys_id=self.sysid_dict[tokens[3]],
+                key=int(tokens[4] == 'bonafide'))
         return ASVFile(speaker_id=tokens[0],
             file_name=tokens[1],
             path=os.path.join(self.files_dir, tokens[1] + '.flac'),
-            sys_id=self.sysid_dict[tokens[2]],
-            key=int(tokens[3] == 'bonafide'))
+            sys_id=self.sysid_dict[tokens[3]],
+            key=int(tokens[4] == 'bonafide'))
         
 
    
