@@ -62,6 +62,9 @@ Fusion experiments performed using the "Support Vector Machine (SVM)"  based fus
 
 SVM fusion script (matlab) is available in 'SVM_fusion/' directory 
 
+# Acknowledgement
+This work is supported by the ExTENSoR project funded by the French Agence Nationale de la Recherche (ANR) and the VoicePersonae project funded by ANR and the Japan Science and Technology Agency.
+
 ## Contact
 For any query regarding this repository, please contact:
 - Hemlata Tak: tak[at]eurecom[dot]fr
