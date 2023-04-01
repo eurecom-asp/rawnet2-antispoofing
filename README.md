@@ -38,11 +38,6 @@ If you would like to compute scores on the development set of ASVspoof 2019 simp
 python main.py --track=logical --loss=CCE --eval --model_path='/path/to/your/best_model.pth' --eval_output='dev_CM_scores.txt'
 ```
 
-Pre_trained weights are available in 'pre_trained_models/'  directory.
-1. S1_system_model: fixed Mel-scaled sinc filters
-2. S2_system_model: fixed inverse-mel-scaled sinc filters
-3. S3_system_model: fixed linear-scaled sinc filters
-
 Compute the min t-DCF and EER(%) on development and evaluation dataset
 ```
 python tDCF_python/evaluate_tDCF_asvspoof19_eval_LA.py dev 'dev_CM_scores.txt'
