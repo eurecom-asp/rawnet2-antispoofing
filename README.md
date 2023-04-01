@@ -32,11 +32,6 @@ To test your own model on the ASVspoof 2019 LA evaluation set:
 python main.py --track=logical --loss=CCE --is_eval --eval --model_path='/path/to/your/your_best_model.pth' --eval_output='eval_CM_scores.txt'
 ```
 
-We also provide a pre-trained model which follows a Mel-scale distribution of the sinc filters at the input layer. To use it you can run: 
-```
-python main.py --track=logical --loss=CCE --is_eval --eval --model_path='pre_trained_model/S1_system_model.pth' --eval_output='pre_trained_eval_CM_scores.txt'
-```
-
 If you would like to compute scores on the development set of ASVspoof 2019 simply run:
 
 ```
