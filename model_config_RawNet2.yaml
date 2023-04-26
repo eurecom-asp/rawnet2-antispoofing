@@ -12,7 +12,7 @@ mg: 1
 #model-related
 model:
   margin: 2
-  nb_samp: 64600
+  nb_samp: 64000
   first_conv: 128   # no. of filter coefficients 
   in_channels: 1
   filts: [128, [128, 128], [128, 512], [512, 512]]
