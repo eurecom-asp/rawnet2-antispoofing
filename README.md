@@ -1,7 +1,8 @@
 End-to-end anti-spoofing with RawNet2
 ===============
 This repository contains our implementation of the paper accepted to ICASSP 2021, "End-to-end anti-spoofing with RawNet2". This work demonstrates the effectivness of end-to-end approaches that utilise automatic feature learning to improve performance, both for seen spoofing attack types as well as for worst-case (A17) unseen attack.
-[Paper link here](https://arxiv.org/abs/2011.01108)
+[Paper link here](https://arxiv.org/abs/2011.01108) [Updated code](https://github.com/asvspoof-challenge/2021/tree/main/LA/Baseline-RawNet2)
+
 
 ## Installation
 First, clone the repository locally, create and activate a conda environment, and install the requirements :
